@@ -10,6 +10,10 @@ android {
         targetSdkVersion 28
         versionCode 12
         versionName "1.9.0"
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86' // <- only the supported ones
+        }
     }
 
     buildTypes {
@@ -28,6 +32,7 @@ android {
         disable 'InvalidPackage'
         abortOnError false
     }
+
 }
 
 dependencies {
